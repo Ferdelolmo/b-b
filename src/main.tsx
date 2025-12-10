@@ -12,7 +12,10 @@ initializeFaro({
     version: '1.0.0',
     environment: 'production'
   },
-  
+  sessionTracking: {
+    samplingRate: 1,
+    persistent: true
+  },
   instrumentations: [
     // Mandatory, omits default instrumentations otherwise.
     ...getWebInstrumentations(),

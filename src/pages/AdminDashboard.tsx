@@ -15,6 +15,7 @@ export default function AdminDashboard() {
     const [price, setPrice] = useState('');
     const [modifier, setModifier] = useState('');
     const [daysOfWeek, setDaysOfWeek] = useState<number[]>([0, 1, 2, 3, 4, 5, 6]);
+    const [isBlocked, setIsBlocked] = useState(false);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -47,6 +48,7 @@ export default function AdminDashboard() {
                 price: Number(price),
                 modifier,
                 daysOfWeek,
+                isBlocked,
             });
             toast.success('Prices updated successfully');
             loadPrices(token);
@@ -93,12 +95,21 @@ export default function AdminDashboard() {
                         <div className="grid grid-cols-2 gap-4">
                             <div>
                                 <Label>Price (€)</Label>
-                                <Input type="number" value={price} onChange={e => setPrice(e.target.value)} required />
+                                <Input type="number" value={price} onChange={e => setPrice(e.target.value)} required={!isBlocked} disabled={isBlocked} />
                             </div>
                             <div>
                                 <Label>Modifier (Optional, e.g. "High Season")</Label>
-                                <Input type="text" value={modifier} onChange={e => setModifier(e.target.value)} />
+                                <Input type="text" value={modifier} onChange={e => setModifier(e.target.value)} disabled={isBlocked} />
                             </div>
+                        </div>
+
+                        <div className="flex items-center space-x-2">
+                            <Checkbox
+                                id="isBlocked"
+                                checked={isBlocked}
+                                onCheckedChange={(checked) => setIsBlocked(checked as boolean)}
+                            />
+                            <Label htmlFor="isBlocked" className="text-destructive font-semibold">Block Dates (Mark as Unavailable)</Label>
                         </div>
 
                         <div>
@@ -117,7 +128,9 @@ export default function AdminDashboard() {
                             </div>
                         </div>
 
-                        <Button type="submit">Update Prices</Button>
+                        <Button type="submit" variant={isBlocked ? "destructive" : "default"}>
+                            {isBlocked ? "Block Dates" : "Update Prices"}
+                        </Button>
                     </form>
                 </CardContent>
             </Card>
@@ -133,7 +146,7 @@ export default function AdminDashboard() {
                                 <tr>
                                     <th className="p-2">Date</th>
                                     <th className="p-2">Price</th>
-                                    <th className="p-2">Is Weekend</th>
+                                    <th className="p-2">Status</th>
                                     <th className="p-2">Modifier</th>
                                 </tr>
                             </thead>
@@ -142,7 +155,13 @@ export default function AdminDashboard() {
                                     <tr key={p.date} className="border-t">
                                         <td className="p-2">{p.date}</td>
                                         <td className="p-2">€{p.price}</td>
-                                        <td className="p-2">{p.is_weekend ? 'Yes' : 'No'}</td>
+                                        <td className="p-2">
+                                            {p.is_blocked ? (
+                                                <span className="text-destructive font-bold">BLOCKED</span>
+                                            ) : (
+                                                <span className="text-green-600">Available</span>
+                                            )}
+                                        </td>
                                         <td className="p-2">{p.modifier || '-'}</td>
                                     </tr>
                                 ))}
