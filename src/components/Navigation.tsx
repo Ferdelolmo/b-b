@@ -10,11 +10,11 @@ export const Navigation: React.FC = () => {
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
 
   const navigationItems = [
-    { key: 'home', href: '#home' },
-    { key: 'rooms', href: '#rooms' },
-    { key: 'availability', href: '#availability' },
-    { key: 'contact', href: '#contact' },
-    { key: 'about', href: '#about' },
+    { key: 'home', href: '/#home' },
+    { key: 'rooms', href: '/#rooms' },
+    { key: 'availability', href: '/#availability' },
+    { key: 'contact', href: '/#contact' },
+    { key: 'about', href: '/#about' },
   ];
 
   const languages: { code: Language; name: string; flag: string }[] = [
@@ -32,8 +32,8 @@ export const Navigation: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3">
             <img src={logo} alt="Itaca Casa Vacanze Logo" className="h-10 w-10 rounded-full object-cover border border-primary/20" />
-            <a href="#home" className="text-2xl font-heading font-bold text-primary hover:text-sea-light transition-colors duration-300">
-              Casa Vacanze Itaca
+            <a href="/" className="text-2xl font-heading font-bold text-primary hover:text-sea-light transition-colors duration-300">
+              Itaca Casa Vacanze
             </a>
           </div>
 

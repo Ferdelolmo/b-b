@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import logo from '../assets/logo.jpg';
@@ -116,13 +117,13 @@ export const Footer: React.FC = () => {
 
             <div className="flex items-center space-x-6">
               {legalLinks.map((link, index) => (
-                <a
+                <Link
                   key={index}
-                  href={link.href}
+                  to={link.href}
                   className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
