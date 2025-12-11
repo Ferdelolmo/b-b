@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar';
-import { ChevronLeft, ChevronRight, Calendar as CalendarIcon } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Calendar as CalendarIcon, MessageCircle, Phone } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Button } from './ui/button';
 import { fetchAvailability, type AvailabilityData } from '../services/availabilityService';
@@ -22,13 +22,13 @@ export const AvailabilityCalendar: React.FC = () => {
       try {
         setLoading(true);
         const data = await fetchAvailability();
-        
+
         // Convert array to object for easier lookup
         const availabilityMap = data.reduce((acc, item) => {
           acc[item.date] = item;
           return acc;
         }, {} as Record<string, AvailabilityData>);
-        
+
         setAvailabilityData(availabilityMap);
       } catch (error) {
         console.error('Failed to load availability data:', error);
@@ -178,17 +178,24 @@ export const AvailabilityCalendar: React.FC = () => {
                 Contact us to reserve your perfect Mediterranean getaway. Enjoy our exclusive direct booking rates.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <Button 
-                  variant="default" 
-                  size="lg" 
+                <Button
+                  variant="default"
+                  size="lg"
                   onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                   className="bg-primary hover:bg-primary/90"
                 >
                   <CalendarIcon className="mr-2 h-5 w-5" />
-                  Book Now
+                  {t('bookNow')}
                 </Button>
-                <Button variant="outline" size="lg">
-                  Call Us: +39 0932 123456
+                <Button variant="outline" size="lg" className="h-auto py-4 flex flex-col gap-2 sm:flex-row sm:gap-4">
+                  <div className="flex items-center gap-2">
+                    <Phone className="h-4 w-4" />
+                    <MessageCircle className="h-4 w-4" />
+                  </div>
+                  <div className="flex flex-col text-xs sm:text-sm font-medium">
+                    <span>+39 339 705 6128</span>
+                    <span>+34 644 925 499</span>
+                  </div>
                 </Button>
               </div>
             </div>

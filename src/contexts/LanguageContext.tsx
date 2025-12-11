@@ -55,6 +55,7 @@ const translations = {
     freeParking: 'Free Parking',
     photoGallery: 'Photo Gallery',
     EVcharge: 'Free charging stations for EVs',
+    callOrWhatsapp: 'Call us or WhatsApp us',
 
     // Availability
     availabilitySubtitle: 'Check our real-time availability and book your perfect dates',
@@ -65,19 +66,19 @@ const translations = {
     readyToBookText: 'Contact us directly to secure your preferred dates and receive personalized assistance',
 
     // Contact
-    contactTitle: 'Book Your Stay',
+    contactTitle: 'Book your stay',
     contactSubtitle: 'Fill out the form below and we\'ll get back to you soon',
     fullName: 'Full Name',
     emailAddress: 'Email Address',
     checkInDate: 'Check-in Date',
     checkOutDate: 'Check-out Date',
     specialRequests: 'Special Requests',
-    address: 'Via dell\'Arancio, 20, Marina di Ragusa, Sicilia, Italia',
-    phone: '+39 0932 123456',
-    email: 'info@hotelitaca.com',
+    address: 'Via dell\'Arancio 20. Corso Oceano Atlantico 28, Marina di Ragusa, Sicilia (2 Independent Entrances)',
+    phone: '+39 3397056128    +34 644925499',
+    email: 'info@itacasavacanze.com',
 
     // Footer
-    followUs: 'Follow Us',
+    followUs: 'Follow us on',
     privacyPolicy: 'Privacy Policy',
     termsConditions: 'Terms & Conditions',
     adults: 'Persons',
@@ -139,6 +140,7 @@ const translations = {
     freeParking: 'Parcheggio Gratuito',
     photoGallery: 'Galleria Fotografica',
     EVcharge: 'Stazioni di carica gratuita',
+    callOrWhatsapp: 'Chiamaci o scrivici su WhatsApp',
 
     // Availability
     availabilitySubtitle: 'Controlla la nostra disponibilità in tempo reale e prenota le tue date perfette',
@@ -149,19 +151,19 @@ const translations = {
     readyToBookText: 'Contattaci direttamente per assicurarti le date preferite e ricevere assistenza personalizzata',
 
     // Contact
-    contactTitle: 'Prenota il Tuo Soggiorno',
+    contactTitle: 'Prenota il tuo soggiorno',
     contactSubtitle: 'Compila il modulo qui sotto e ti ricontatteremo presto',
     fullName: 'Nome Completo',
     emailAddress: 'Indirizzo Email',
     checkInDate: 'Data di Check-in',
     checkOutDate: 'Data di Check-out',
     specialRequests: 'Richieste Speciali',
-    address: 'Via dell\'Arancio, 20, Marina di Ragusa, Sicilia, Italia',
-    phone: '+39 0932 123456',
-    email: 'info@hotelitaca.com',
+    address: 'Via dell\'Arancio 20. Corso Oceano Atlantico 28, Marina di Ragusa, Sicilia (2 Ingressi Indipendenti)',
+    phone: '+39 3397056128    +34 644925499',
+    email: 'info@itacasavacanze.com',
 
     // Footer
-    followUs: 'Seguici',
+    followUs: 'Seguici su',
     privacyPolicy: 'Privacy Policy',
     termsConditions: 'Termini e Condizioni',
     adults: 'Persone',
@@ -223,6 +225,7 @@ const translations = {
     freeParking: 'Estacionamiento Gratuito',
     photoGallery: 'Galería de Fotos',
     EVcharge: 'Estación de carga gratuita',
+    callOrWhatsapp: 'Llámanos o escríbenos por WhatsApp',
 
     // Availability
     availabilitySubtitle: 'Consulta nuestra disponibilidad en tiempo real y reserva tus fechas perfectas',
@@ -233,19 +236,19 @@ const translations = {
     readyToBookText: 'Contáctanos directamente para asegurar tus fechas preferidas y recibir asistencia personalizada',
 
     // Contact
-    contactTitle: 'Reserva tu Estancia',
+    contactTitle: 'Reserva tu estancia',
     contactSubtitle: 'Completa el formulario a continuación y te contactaremos pronto',
     fullName: 'Nombre Completo',
     emailAddress: 'Dirección de Email',
     checkInDate: 'Fecha de Check-in',
     checkOutDate: 'Fecha de Check-out',
     specialRequests: 'Solicitudes Especiales',
-    address: 'Via dell\'Arancio, 20, Marina di Ragusa, Sicilia, Italia',
-    phone: '+39 0932 123456',
-    email: 'info@hotelitaca.com',
+    address: 'Via dell\'Arancio 20. Corso Oceano Atlantico 28, Marina di Ragusa, Sicilia (2 Entradas Independientes)',
+    phone: '+39 3397056128    +34 644925499',
+    email: 'info@itacasavacanze.com',
 
     // Footer
-    followUs: 'Síguenos',
+    followUs: 'Síguenos en',
     privacyPolicy: 'Política de Privacidad',
     termsConditions: 'Términos y Condiciones',
     adults: 'Personas',

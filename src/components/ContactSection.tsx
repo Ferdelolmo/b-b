@@ -291,12 +291,16 @@ export const ContactSection: React.FC = () => {
                 <div className="w-12 h-12 bg-gradient-sunset rounded-lg flex items-center justify-center">
                   <Clock className="h-6 w-6 text-background" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground">Reception Hours</h3>
+                <h3 className="text-xl font-semibold text-foreground">Check in & Check out</h3>
               </div>
               <div className="space-y-2 text-muted-foreground">
                 <div className="flex justify-between">
-                  <span>Monday - Sunday</span>
-                  <span className="font-medium">7:00 AM - 11:00 PM</span>
+                  <span>Check in</span>
+                  <span className="font-medium">From 15:00 pm</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Check out</span>
+                  <span className="font-medium">Up to 11:00 am</span>
                 </div>
 
               </div>

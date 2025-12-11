@@ -31,7 +31,7 @@ export const Navigation: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center">
             <a href="#home" className="text-2xl font-heading font-bold text-primary hover:text-sea-light transition-colors duration-300">
-              Apartamento Itaca
+              Casa Vacanze Itaca
             </a>
           </div>
 
@@ -61,7 +61,7 @@ export const Navigation: React.FC = () => {
                 <span className="hidden sm:inline">{currentLanguage?.flag} {currentLanguage?.name}</span>
                 <span className="sm:hidden">{currentLanguage?.flag}</span>
               </button>
-              
+
               {isLanguageOpen && (
                 <div className="absolute right-0 mt-2 w-40 bg-card border border-border rounded-md shadow-elegant z-50">
                   {languages.map((lang) => (
@@ -71,9 +71,8 @@ export const Navigation: React.FC = () => {
                         setLanguage(lang.code);
                         setIsLanguageOpen(false);
                       }}
-                      className={`w-full text-left px-4 py-2 text-sm hover:bg-muted transition-colors duration-200 first:rounded-t-md last:rounded-b-md ${
-                        language === lang.code ? 'bg-muted text-primary font-medium' : 'text-foreground'
-                      }`}
+                      className={`w-full text-left px-4 py-2 text-sm hover:bg-muted transition-colors duration-200 first:rounded-t-md last:rounded-b-md ${language === lang.code ? 'bg-muted text-primary font-medium' : 'text-foreground'
+                        }`}
                     >
                       {lang.flag} {lang.name}
                     </button>

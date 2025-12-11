@@ -6,9 +6,7 @@ export const Footer: React.FC = () => {
   const { t } = useLanguage();
 
   const socialLinks = [
-    { icon: Facebook, href: 'https://facebook.com/hotelitaca', label: 'Facebook' },
     { icon: Instagram, href: 'https://instagram.com/hotelitaca', label: 'Instagram' },
-    { icon: Twitter, href: 'https://twitter.com/hotelitaca', label: 'Twitter' },
   ];
 
   const quickLinks = [
@@ -31,7 +29,7 @@ export const Footer: React.FC = () => {
           {/* Hotel Info */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-2xl font-heading font-bold mb-2">Apartamento Itaca</h3>
+              <h3 className="text-2xl font-heading font-bold mb-2">Itaca Casa Vacanze</h3>
               <p className="text-primary-foreground/80 leading-relaxed">
                 Experience Mediterranean luxury in the neighbourhood of Marina di Ragusa, Sicily. Where timeless elegance meets modern comfort.
               </p>
@@ -58,7 +56,7 @@ export const Footer: React.FC = () => {
           {/* Social & Newsletter */}
           <div className="space-y-6">
             <h4 className="text-lg font-semibold text-primary-foreground">{t('followUs')}</h4>
-            
+
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (
@@ -74,23 +72,6 @@ export const Footer: React.FC = () => {
                 </a>
               ))}
             </div>
-
-            {/* Newsletter Signup */}
-            <div className="space-y-3">
-              <p className="text-sm text-primary-foreground/80">
-                Subscribe to our newsletter for special offers and updates
-              </p>
-              <div className="flex">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="flex-1 px-3 py-2 bg-primary-foreground/10 border border-primary-foreground/20 rounded-l-md text-sm text-primary-foreground placeholder-primary-foreground/60 focus:outline-none focus:ring-2 focus:ring-primary-foreground/50"
-                />
-                <button className="px-4 py-2 bg-primary-foreground/20 border border-primary-foreground/20 border-l-0 rounded-r-md text-sm font-medium hover:bg-primary-foreground/30 transition-colors duration-300">
-                  Subscribe
-                </button>
-              </div>
-            </div>
           </div>
 
           {/* Contact Info */}
@@ -98,19 +79,20 @@ export const Footer: React.FC = () => {
             <div className="flex items-center space-x-3">
               <MapPin className="h-4 w-4 text-primary-foreground/70" />
               <span className="text-sm text-primary-foreground/80">
-                Via dell'Arancio, 20<br />Marina di Ragusa, Sicily, Italy
+                {t('address')}
               </span>
             </div>
             <div className="flex items-center space-x-3">
               <Phone className="h-4 w-4 text-primary-foreground/70" />
               <a href="tel:+390932123456" className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300">
-                +39 0932 123456
+                +39 3397056128
+                +34 644925499
               </a>
             </div>
             <div className="flex items-center space-x-3">
               <Mail className="h-4 w-4 text-primary-foreground/70" />
-              <a href="mailto:info@hotelitaca.com" className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300">
-                info@hotelitaca.com
+              <a href="mailto:info@itacasavacanze.com" className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300">
+                info@itacasavacanze.com
               </a>
             </div>
           </div>
@@ -120,9 +102,9 @@ export const Footer: React.FC = () => {
         <div className="mt-12 pt-8 border-t border-primary-foreground/20">
           <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
             <div className="text-sm text-primary-foreground/70">
-              © {new Date().getFullYear()} Apartamento Itaca. All rights reserved.
+              © {new Date().getFullYear()} Itaca Casa Vacanze. All rights reserved.
             </div>
-            
+
             <div className="flex items-center space-x-6">
               {legalLinks.map((link, index) => (
                 <a

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar as CalendarIcon, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Calendar as CalendarIcon, ChevronLeft, ChevronRight, MessageCircle, Phone } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Button } from './ui/button';
 import { calculatePrice } from '../services/pricingService';
@@ -121,20 +121,20 @@ export const AvailabilitySection: React.FC = () => {
                   <div
                     key={index}
                     className={`h-20 border-r border-b border-border last:border-r-0 p-2 relative cursor-pointer transition-all duration-200 ${isPast
-                        ? 'bg-muted/50 cursor-not-allowed'
-                        : isAvailable
-                          ? 'hover:bg-cream bg-background'
-                          : 'bg-destructive/10 cursor-not-allowed'
+                      ? 'bg-muted/50 cursor-not-allowed'
+                      : isAvailable
+                        ? 'hover:bg-cream bg-background'
+                        : 'bg-destructive/10 cursor-not-allowed'
                       }`}
                   >
                     <div className="h-full flex flex-col justify-between">
                       <div className={`text-sm font-medium ${isToday
-                          ? 'text-primary font-bold'
-                          : isPast
-                            ? 'text-muted-foreground/50'
-                            : isAvailable
-                              ? 'text-foreground'
-                              : 'text-destructive'
+                        ? 'text-primary font-bold'
+                        : isPast
+                          ? 'text-muted-foreground/50'
+                          : isAvailable
+                            ? 'text-foreground'
+                            : 'text-destructive'
                         }`}>
                         {day.getDate()}
                       </div>
@@ -194,8 +194,15 @@ export const AvailabilitySection: React.FC = () => {
                   <CalendarIcon className="mr-2 h-5 w-5" />
                   {t('bookNow')}
                 </Button>
-                <Button variant="outline" size="lg">
-                  Call Us: + 39 3397056128 +34 644925499
+                <Button variant="outline" size="lg" className="h-auto py-4 flex flex-col gap-2 sm:flex-row sm:gap-4">
+                  <div className="flex items-center gap-2">
+                    <Phone className="h-4 w-4" />
+                    <MessageCircle className="h-4 w-4" />
+                  </div>
+                  <div className="flex flex-col text-xs sm:text-sm font-medium">
+                    <span>+39 339 705 6128</span>
+                    <span>+34 644 925 499</span>
+                  </div>
                 </Button>
               </div>
             </div>
