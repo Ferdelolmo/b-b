@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Globe, Menu, X } from 'lucide-react';
 import { useLanguage, Language } from '../contexts/LanguageContext';
 import { Button } from './ui/button';
+import logo from '../assets/logo.jpg';
 
 export const Navigation: React.FC = () => {
   const { language, setLanguage, t } = useLanguage();
@@ -29,7 +30,8 @@ export const Navigation: React.FC = () => {
       <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center space-x-3">
+            <img src={logo} alt="Itaca Casa Vacanze Logo" className="h-10 w-10 rounded-full object-cover border border-primary/20" />
             <a href="#home" className="text-2xl font-heading font-bold text-primary hover:text-sea-light transition-colors duration-300">
               Casa Vacanze Itaca
             </a>

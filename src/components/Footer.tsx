@@ -1,12 +1,13 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Facebook, Instagram, Twitter } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
+import logo from '../assets/logo.jpg';
 
 export const Footer: React.FC = () => {
   const { t } = useLanguage();
 
   const socialLinks = [
-    { icon: Instagram, href: 'https://instagram.com/hotelitaca', label: 'Instagram' },
+    { icon: Instagram, href: 'https://www.instagram.com/itaca_casavacanza/', label: 'Instagram' },
   ];
 
   const quickLinks = [
@@ -29,7 +30,10 @@ export const Footer: React.FC = () => {
           {/* Hotel Info */}
           <div className="space-y-6">
             <div>
-              <h3 className="text-2xl font-heading font-bold mb-2">Itaca Casa Vacanze</h3>
+              <div className="flex items-center space-x-3 mb-4">
+                <img src={logo} alt="Itaca Casa Vacanze Logo" className="h-12 w-12 rounded-full object-cover border-2 border-primary-foreground/20" />
+                <h3 className="text-2xl font-heading font-bold">Itaca Casa Vacanze</h3>
+              </div>
               <p className="text-primary-foreground/80 leading-relaxed">
                 Experience Mediterranean luxury in the neighbourhood of Marina di Ragusa, Sicily. Where timeless elegance meets modern comfort.
               </p>
@@ -84,10 +88,15 @@ export const Footer: React.FC = () => {
             </div>
             <div className="flex items-center space-x-3">
               <Phone className="h-4 w-4 text-primary-foreground/70" />
-              <a href="tel:+390932123456" className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300">
-                +39 3397056128
-                +34 644925499
-              </a>
+              <div className="flex flex-col space-y-2">
+                <a href="https://wa.me/393397056128" target="_blank" rel="noopener noreferrer" className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300 flex items-center space-x-2">
+                  <span>+39 339 705 6128</span>
+                  <span className="text-xs opacity-70">(WhatsApp & Phone)</span>
+                </a>
+                <a href="tel:+34644925499" className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors duration-300">
+                  +34 644 925 499
+                </a>
+              </div>
             </div>
             <div className="flex items-center space-x-3">
               <Mail className="h-4 w-4 text-primary-foreground/70" />
